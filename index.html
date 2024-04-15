@@ -8,6 +8,58 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <ul>
+        <li><a href="#">Főmenü 1</a>
+            <ul>
+                <li><a href="#">Almenü 1</a></li>
+                <li><a href="#">Almenü 2</a></li>
+                <li><a href="#">Almenü 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Főmenü 2</a>
+            <ul>
+                <li><a href="#">Almenü 4</a></li>
+                <li><a href="#">Almenü 5</a></li>
+                <li><a href="#">Almenü 6</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Főmenü 3</a></li>
+    </ul>
 </body>
 </html>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+ul li:hover > ul {
+    display: block;
+}
+
+ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+ul ul li {
+    display: block;
+}
